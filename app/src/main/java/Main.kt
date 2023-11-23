@@ -4,7 +4,7 @@ var age = 24 // age can be changed
 var isManualTester = true
 var surnameFirstLetter = "P"
 var textA = "Hello, my name is $name $surnameFirstLetter, I'm $age years old, I'm Manual QA at SurfStudio"
-var textB = "Hello, I'm $name and I'm learning Automation Testing"
+var textB = "Hello, World!"
 
 /* Переменные для
 практики
