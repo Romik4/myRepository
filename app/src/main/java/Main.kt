@@ -25,14 +25,15 @@ fun math() {
     // один println вместо четырех
     println("$f, $g, $h, $i")
 }
-
+var counter = 1
+var num = counter++
 fun main() {
     if (a < b || e == d) {
         println(textA)
     } else if (c == e){
         println(textB)
     } else {
-        println("Hello")
+        println(num)
     }
     println(math())
 }
