@@ -22,17 +22,17 @@ fun math() {
     var g = c / d // деление
     var h = d % a // деление с остатком
     var i = b * d // умножение
-    println(f)
-    println(g)
-    println(h)
-    println(i)
+    // один println вместо четырех
+    println("$f, $g, $h, $i")
 }
 
 fun main() {
-    if (a - b == d) {
+    if (a < b || e == d) {
         println(textA)
-    } else {
+    } else if (c == e){
         println(textB)
+    } else {
+        println("Hello")
     }
     println(math())
 }
