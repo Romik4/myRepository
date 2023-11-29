@@ -27,7 +27,7 @@ fun main() {
     }
 
         // Задание b)
-    repeat(5){
+    repeat(10){
         println("Hello, World!")
     }
 }
