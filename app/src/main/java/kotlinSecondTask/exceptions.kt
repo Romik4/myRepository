@@ -12,19 +12,25 @@ fun main() {
     /**
      * Вывод второго задания
      */
-    println("введите первое число")
-    var a = readLine()?.toInt()
-    println("введите второе число")
-    var b = readLine()?.toInt()
-    
+    println("Введите первое число")
+    var a = readLine()?.toIntOrNull()
+    println("Введите второе число")
+    var b = readLine()?.toIntOrNull()
+    if (a != null && b != null) {
+        numbers(a, b)
+    } else if (b == 0) {
+        catchErr(b)
+    }
+
+
 }
 
-fun except () {
+fun except() {
     try {
         println("Введите целое число")
         val num = readLine()?.toInt()
         println("$num - целое число")
-    } catch (e: Exception) {
+    } catch (e: ArithmeticException) {
         println("$e - Исключение")
     } finally {
         println("Конец программы")
@@ -35,16 +41,16 @@ fun except () {
 (например, обращение к несуществующему элементу массива или деление на ноль),
 и обработайте это исключение, выводя стек вызовов.*/
 
-fun division (a: Int, b: Int) {
-    if (a != 0 && b != 0) {
-        println(a/b)
-    } else {
-        println("бла бла бла")
-    }
+fun numbers(a: Int, b: Int) {
+    println(a / b)
+}
 
+fun catchErr(b: Int) {
     try {
-        b == 0
-    } catch (e: Exception){
-        println("деление на ноль невозможно")
+        if (b == 0) {
+
+        }
+    } catch (e: ArithmeticException) {
+        println("Деление на ноль невозможно")
     }
 }

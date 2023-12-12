@@ -18,7 +18,7 @@ fun main() {
     /**
      * Проверка на ввод числа
      */
-    if (target != null){
+    if (target != null) {
         searchNum(matrix, target)
     } else {
         println("Введите целое число")
@@ -41,19 +41,20 @@ fun searchNum(matrix: Array<Array<Int>>, target: Int) {
         /**
          * @column - цикл проходит по значениям внутри массивов, грубо говоря по столбцам
          */
-      column@  for (n in matrix[i].indices){
-            if (matrix[i][n] == target){
+        column@ for (n in matrix[i].indices) {
+            if (matrix[i][n] == target) {
 
                 /**
                  * для корректного выведения номера строк и столбцов пришлось добавить +1,
                  * поскольку индексы в массивы считаются с 0, а не с 1
                  */
-                println("$target находится в строке ${i+1} в столбце ${n+1}")
-                return
+                println("$target находится в строке ${i + 1} в столбце ${n + 1}")
+                break@line
             }
         }
     }
-    println("$target отсутствует в матрице")
+    //println("$target отсутствует в матрице")
+
 }
 
 /**
