@@ -33,7 +33,7 @@ var newText = scan.nextLine()
 fun main() {
     if (a < b || e == d) {
         println(textA)
-    } else if (c == e){
+    } else if (isManualTester == true){
         println(textB)
     } else {
         println("Hello, $newText!")
