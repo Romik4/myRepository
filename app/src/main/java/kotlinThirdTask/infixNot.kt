@@ -7,18 +7,10 @@ package kotlinThirdTask
  *      и возвращает true, если первое число больше второго, и false в противном случае.
  *      Затем используйте эту функцию, сравнив две пары чисел.
  */
-fun main () {
-    infix fun Int.isGreater(other: Int): Int {
-
-        if (this > other) {
-            println(true)
-            return this
-        } else {
-            println(false)
-            return other
-        }
-
+fun main() {
+    infix fun Int.isGreater(other: Int): Boolean {
+        return this > other
     }
 
-    println(1 isGreater 3)
+    println(5 isGreater 7)
 }

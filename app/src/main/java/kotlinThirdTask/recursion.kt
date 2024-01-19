@@ -9,21 +9,21 @@ package kotlinThirdTask
  */
 
 fun main() {
-    /**
-     * Рекурсивная функция, которая выводит числа от 1 до 6
-     */
-    fun generateSequence(n: Int): List<Int> {
-        return if (n < 1) emptyList() else generateSequence(n - 1) + n
-    }
     println(generateSequence(6))
-
-    /**
-     * Хвостово рекурсивная функция, которая выводит числа от 6 до 1
-     *
-     */
-    tailrec fun generateSeq(n: Int, arr: List<Int> = emptyList()): List<Int> {
-        return if (n < 1) arr else generateSeq(n - 1, arr + n)
-    }
     println(generateSeq(6))
 }
 
+/**
+ * Рекурсивная функция, которая выводит числа от 1 до 6
+ */
+fun generateSequence(n: Int): List<Int> {
+    return if (n < 1) emptyList() else generateSequence(n - 1) + n
+}
+
+/**
+ * Хвостово рекурсивная функция, которая выводит числа от 6 до 1
+ *
+ */
+tailrec fun generateSeq(n: Int, arr: List<Int> = emptyList()): List<Int> {
+    return if (n < 1) arr else generateSeq(n - 1, arr + n)
+}

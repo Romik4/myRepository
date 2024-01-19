@@ -7,11 +7,11 @@ package kotlinThirdTask
  *      и возвращает приветственное сообщение. Функция должна иметь параметр по умолчанию "мир".
  *      Затем вызовите функцию дважды: с именем и без имени.
  */
-fun main () {
+fun main() {
     println(sayHello("Влад"))
     println(sayHello())
 }
 
-fun sayHello (name: String = "мир") {
+fun sayHello(name: String = "мир") {
     println("Привет, $name!")
 }

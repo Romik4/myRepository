@@ -9,12 +9,12 @@ package kotlinThirdTask
  */
 
 fun main() {
-    val QADept = mutableListOf<String>("Вася", "Маша", "Аня", "Даша")
+    val qaDept = mutableListOf<String>("Вася", "Маша", "Аня", "Даша")
 
     /**
      * Функция let
      */
-    QADept.let {
+    qaDept.let {
         println(it)
         it.add("Даша")
 
@@ -23,7 +23,7 @@ fun main() {
     /**
      * Функция run
      */
-    QADept.run {
+    qaDept.run {
         println(this)
         add("Саша")
     }
@@ -31,24 +31,24 @@ fun main() {
     /**
      * Функция also
      */
-    QADept
+    qaDept
         .also { println(it) }
         .reverse()
 
     /**
      * Функция apply
      */
-    QADept
+    qaDept
         .apply { println(this) }
         .add("Влад")
 
     /**
      * Функция with
      */
-    with(QADept) {
+    with(qaDept) {
         println(this)
         remove("Влад")
     }
 
-    println(QADept)
+    println(qaDept)
 }
