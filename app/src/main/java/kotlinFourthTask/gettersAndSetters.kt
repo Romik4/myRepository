@@ -14,13 +14,15 @@ fun main() {
      * Решил сделать так, чтобы пользователь мог вбить в консоль возраст,
      * после чего в сеттере будет проходить проверка на возраст
      */
+    val enterNum = java.util.Scanner(System.`in`)
+    val enterAge = enterNum.nextInt()
+
+    val romik = PersonTwo()
+
     romik.age = enterAge
     println(romik.name)
 
 }
-
-val enterNum = java.util.Scanner(System.`in`)
-val enterAge = enterNum.nextInt()
 
 class PersonTwo {
     var name: String = "Рома"
@@ -31,8 +33,5 @@ class PersonTwo {
             field = value
             if (field > 0) println("возраст положительный: $field") else println("возраст не может быть отрицательным")
         }
-
-
 }
 
-var romik = PersonTwo()

@@ -7,6 +7,10 @@ package kotlinFourthTask
  */
 
 fun main() {
+    val myFriend = Car()
+    val me = Car()
+    val myDad = Car()
+
     myFriend.drive("my friend")
     me.drive("me")
     myDad.drive("my dad")
@@ -20,7 +24,3 @@ class Car {
         println("The car is driven by $person")
     }
 }
-
-val myFriend = Car()
-val me = Car()
-val myDad = Car()

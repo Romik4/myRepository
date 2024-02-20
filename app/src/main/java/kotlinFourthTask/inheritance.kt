@@ -9,6 +9,12 @@ package kotlinFourthTask
  */
 
 fun main() {
+
+    //Объекты классов Dog & Cat
+
+    val myDog = Dog()
+    val myCat = Cat()
+
     myDog.makeSound()
     myCat.makeSound()
 }
@@ -19,29 +25,19 @@ open class Animal {
     }
 }
 
-/**
- * Создадим класс Dog, который наследует класс Animal
- */
+
+//Создадим класс Dog, который наследует класс Animal
+
 class Dog: Animal() {
-    /**
-     * Перезапишем его метод makeSound
-     */
+    // Перезапишем его метод makeSound
     override fun makeSound() {
         println("Dog goes \"woof\"")
     }
 }
 
-/**
- * Сделаем все тоже самое с классом Cat
- */
+// Сделаем все тоже самое с классом Cat
 class Cat: Animal() {
     override fun makeSound() {
         println("Cat goes \"meow\"")
     }
 }
-
-/**
- * Объекты классов Dog & Cat
- */
-val myDog = Dog()
-val myCat = Cat()

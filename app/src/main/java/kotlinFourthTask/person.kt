@@ -9,17 +9,16 @@ package kotlinFourthTask
  */
 
 fun main() {
-    var showPerson = Person()
+    val showPerson = Person()
 
-    /**
-     * Прямой доступ к свойствам класса невозможен из-за приватности свойства
-     */
-//    showPerson.name
-//    showPerson.age
+    // Прямой доступ к свойствам класса невозможен из-за приватности свойства
 
-    /**
-     * Но к свойствам можно обратиться через методы класса getName() и getAge()
-     */
+    //showPerson.name
+    //showPerson.age
+
+
+    // Но к свойствам можно обратиться через методы класса getName() и getAge()
+
     showPerson.getName()
     showPerson.getAge()
 }
@@ -35,6 +34,4 @@ class Person {
     fun getAge() {
         println(age)
     }
-
-
 }

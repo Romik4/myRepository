@@ -8,6 +8,8 @@ package kotlinFourthTask
  */
 
 fun main() {
+    val math = MathUtils()
+
     println(math.add(2, 2))
     println(math.add(3, 3, 3))
 }
@@ -21,5 +23,3 @@ class MathUtils {
         return one + two + three
     }
 }
-
-val math = MathUtils()
