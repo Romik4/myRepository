@@ -24,14 +24,16 @@ fun main() {
 
 }
 
-class PersonTwo {
+class PersonTwo () {
     var name: String = "Рома"
         get() = "Ромик"
 
     var age: Int = 24
         set(value: Int) {
             field = value
-            if (field > 0) println("возраст положительный: $field") else println("возраст не может быть отрицательным")
+            if (field > 0) println("возраст положительный: $field")
+            // при вводе отрицательного числа оно преобразуется в положительное)
+            else println(field * -1)
         }
 }
 

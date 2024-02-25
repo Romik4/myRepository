@@ -17,19 +17,20 @@ fun main() {
  * и отвечает за название группы значений
  * В моем случае это FIRST и тд.
  */
-enum class DayOfWeek(val values: String) {
-    FIRST("Monday"),
-    SECOND("Tuesday"),
-    THIRD("Wednesday"),
-    FOURTH("Thursday"),
-    FIFTH("Friday"),
-    SIXTH("Saturday"),
-    SEVENTH("Sunday");
+enum class DayOfWeek(val values: String, val secondValues: String) {
+    MONDAY("First", "Second"),
+    TUESDAY("Second", "Third"),
+    WEDNESDAY("Third", "Fourth"),
+    THURSDAY("Fourth", "Fifth"),
+    FRIDAY("Fifth", "Sixth"),
+    SATURDAY("Sixth", "Seventh"),
+    SUNDAY("Seventh", "First");
 
     companion object {
         fun printAllDays() {
             values().forEach {
-                println("${it.name} day of the week is ${it.values}")
+                println("In European countries ${it.name} is the ${it.values} day of the week")
+                println("In America ${it.name} is the ${it.secondValues} day of the week")
             }
         }
     }

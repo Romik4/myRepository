@@ -7,19 +7,16 @@ package kotlinFourthTask
  */
 
 fun main() {
-    val myFriend = Car()
-    val me = Car()
-    val myDad = Car()
+    val myFriend = Car("Audi", "Black", 1995)
+    val me = Car("Alfa Romeo", "White", 1980)
+    val myDad = Car("BMW", "Blue", 2000)
 
     myFriend.drive("my friend")
     me.drive("me")
     myDad.drive("my dad")
 }
 
-class Car {
-    var model: String = "Lada"
-    var color: String = "White"
-    var year: Int = 2010
+class Car(var model: String, var color: String, var year: Int) {
     fun drive(person: String = "somebody") {
         println("The car is driven by $person")
     }
