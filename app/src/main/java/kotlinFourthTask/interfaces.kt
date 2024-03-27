@@ -9,8 +9,13 @@ package kotlinFourthTask
  */
 
 fun main() {
+    val bird = Bird()
+    val airplane = Airplane()
+
     bird.fly()
+    bird.navigate()
     airplane.navigate()
+    airplane.fly()
 }
 
 interface Flyable {
@@ -21,17 +26,22 @@ interface Navigable {
     fun navigate()
 }
 
-class Bird: Flyable {
+class Bird : Flyable, Navigable {
     override fun fly() {
         println("Bird goes tweet and flies")
     }
-}
 
-class Airplane: Navigable {
     override fun navigate() {
-        println("Pilot navigates an airplane")
+        println("Bird is navigable")
     }
 }
 
-var bird = Bird()
-var airplane = Airplane()
+class Airplane : Navigable, Flyable {
+    override fun navigate() {
+        println("Pilot navigates an airplane")
+    }
+
+    override fun fly() {
+        println("Airplane is flying")
+    }
+}
