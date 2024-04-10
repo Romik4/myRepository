@@ -11,12 +11,12 @@ package kotlinFourthTask
  *  Если я все правильно понял, то мы можем добавить в интерфейс новый метод,
  *  прописать его в существующем классе и вызвать этот метод через объект существующего класса?
  */
-interface InnerPart {
+interface Engine {
     fun start()
     fun stop() // Добавил еще один метод
 }
 
-class Engine : InnerPart {
+class DieselEngine : Engine {
     override fun start() {
         println("Engine starts")
     }
@@ -27,17 +27,17 @@ class Engine : InnerPart {
     }
 }
 
-interface OuterPart {
+interface Tires {
     fun move()
 }
 
-class Tires : OuterPart {
+class SummerTires : Tires {
     override fun move() {
         println("Car moves")
     }
 }
 
-class MyCar(private val engine: InnerPart, private val tires: OuterPart) {
+class MyCar(private val engine: Engine, private val tires: Tires) {
     fun drive() {
         engine.start()
         tires.move()
@@ -47,6 +47,6 @@ class MyCar(private val engine: InnerPart, private val tires: OuterPart) {
 }
 
 fun main() {
-    val myCar = MyCar(Engine(), Tires())
+    val myCar = MyCar(DieselEngine(), SummerTires())
     myCar.drive()
 }
