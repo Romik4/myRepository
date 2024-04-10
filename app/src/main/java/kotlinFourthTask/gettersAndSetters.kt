@@ -24,7 +24,7 @@ fun main() {
 
 }
 
-class PersonTwo () {
+class PersonTwo {
     var name: String = "Рома"
         get() = "Ромик"
 

@@ -28,7 +28,7 @@ open class Animal {
 
 //Создадим класс Dog, который наследует класс Animal
 
-class Dog: Animal() {
+class Dog : Animal() {
     // Перезапишем его метод makeSound
     override fun makeSound() {
         println("Dog goes \"woof\"")
@@ -36,7 +36,7 @@ class Dog: Animal() {
 }
 
 // Сделаем все тоже самое с классом Cat
-class Cat: Animal() {
+class Cat : Animal() {
     override fun makeSound() {
         println("Cat goes \"meow\"")
     }
