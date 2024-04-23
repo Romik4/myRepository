@@ -15,8 +15,6 @@ fun save(item: Person) {
     people.add(item)
 }
 
-val maturedPeople = people.filter { it.age > 18 }.map { it }
-
 fun main() {
     save(Person("Roma", 24))
     save(Person("Ivan", 15))
@@ -24,12 +22,19 @@ fun main() {
     save(Person("Petr", 30))
     save(Person("Dima", 10))
     save(Person("Masha", 25))
-    save(Person("Sveta", 17))
+    save(Person("Sveta", 18))
     save(Person("Kolya", 19))
 
+    val maturedPeople = people
+        .filter { it.age > 18 }
+        .map { it.name }
+
+    /**
+     * Видимо я вообще не запустил первоначальный код, сейчас перечитал задание и понял,
+     * что изначально было сделано не по условию задания. Теперь все работает корректно.
+     */
     println(maturedPeople)
 }
-
 
 
 

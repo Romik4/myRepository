@@ -9,16 +9,13 @@ package kotlinFifthTask
 
 val nums = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
-val reduceNums = nums.reduce {acc, i -> acc + i}
+val reduceNums = nums.reduce { acc, i -> acc + i }
 
-/**
- * не очень понял, как с помощью reduce или fold найти минимальное и
- * максимальное значения в списке, но вроде мой способ работает
- */
-val minNum = nums.fold(-54) {acc, i -> acc + i}
-val maxNum = nums.fold(-45) {acc, i -> acc + i}
+val minNum = nums.reduce { acc, i -> if (i < acc) i else acc }
+val maxNum = nums.reduce { acc, i -> if (i > acc) i else acc }
+
 fun main() {
-    println(reduceNums)
+    println("Сумма чисел в коллекции $reduceNums")
     println("Минимальное число в списке: $minNum")
     println("Максимальное число в списке: $maxNum")
 }

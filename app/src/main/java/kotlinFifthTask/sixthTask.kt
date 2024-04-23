@@ -16,7 +16,11 @@ val sequence = sequence {
     }
 }
 
-val firstIntegers = sequence.filter { it % 5 == 0 }.map { it * 2 }.take(20).toList()
+val firstIntegers = sequence
+    .filter { it % 5 == 0 }
+    .map { it * 2 }
+    .take(20)
+    .toList()
 
 fun main() {
     println(firstIntegers)
